@@ -1,7 +1,7 @@
 export default function Submissions() {
   return (
-    <div>
-      Submissions
-    </div>
+    <>
+      <h2>Submissions</h2>
+    </>
   )
 }

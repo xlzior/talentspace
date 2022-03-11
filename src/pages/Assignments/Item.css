@@ -1,0 +1,21 @@
+.item {
+  text-decoration: none;
+  color: initial;
+  margin: 20px;
+  padding: 20px;
+  min-width: 300px;
+  width: 40%;
+  border-radius: 13px;
+  border: 1px solid rgb(0 0 0 / 5%);
+  background-color: white;
+  box-shadow: 0 20px 20px 0 rgb(0 0 0 / 5%);
+}
+
+.item:hover {
+  box-shadow: 0 40px 40px 0 rgb(0 0 0 / 10%);
+  transition: box-shadow 0.5s;
+}
+
+.item h4 {
+  margin: 0;
+}

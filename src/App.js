@@ -4,10 +4,11 @@ import Layout from "./pages/common/Layout";
 
 import Assignments from "./pages/Assignments";
 import List from "./pages/Assignments/List";
-import Preview from "./pages/Assignments/Preview";
-import Assignment from "./pages/Assignments/Assignment";
+import Preview from "./pages/Preview";
+import DoAssignment from "./pages/DoAssignment";
 
 import Submissions from "./pages/Submissions";
+import About from "./pages/About";
 
 export default function App() {
   return (
@@ -16,9 +17,10 @@ export default function App() {
         <Route path="assignments" element={<Assignments />}>
           <Route path="" element={<List />} />
           <Route path="preview" element={<Preview />} />
-          <Route path="do" element={<Assignment />} />
+          <Route path="do" element={<DoAssignment />} />
         </Route>
         <Route path="submissions" element={<Submissions />} />
+        <Route path="" element={<About />} />
       </Route>
     </Routes>
   );

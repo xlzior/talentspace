@@ -1,0 +1,16 @@
+a.logo-wrapper {
+  text-decoration: none;  
+}
+
+h1.logo {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+p.subtitle {
+  font-size: medium;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0 20px;
+}

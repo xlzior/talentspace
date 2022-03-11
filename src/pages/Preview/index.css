@@ -1,0 +1,11 @@
+a.start-btn > button {
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+  padding: 15px;
+  min-width: 300px;
+  border: none;
+  border-radius: 10px;
+  background-color: #d97485;
+  color: white;
+}

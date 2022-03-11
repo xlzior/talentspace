@@ -1,7 +1,17 @@
+import Item from "./Item";
+
+import "./List.css"
+
 export default function List() {
   return (
-    <div>
-      List
-    </div>
+    <>
+      <h2>Assignments</h2>
+      <div className="list">
+        <Item />
+        <Item />
+        <Item />
+        <Item />
+      </div>
+    </>
   )
 }
