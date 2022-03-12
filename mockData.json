@@ -1,0 +1,49 @@
+{"__collections__":{
+    "assignments":{
+        "c1a1":{
+            "title":"assignment 1",
+            "companyName":"Company A",
+            "description":"This assignment has three MCQ questions",
+            "__collections__":{
+                "questions":{
+                    "c1a1q1":{
+                        "answer":20,
+                        "options":[10,20,30,40],
+                        "questionText":"What is 10+10?",
+                        "__collections__":{}
+                        },
+                    "c1a1q2":{
+                        "answer":"Saturday",
+                        "questionText":"Which day comes after Friday?",
+                        "options":["Thursday","Monday","Saturday","Sunay"],
+                        "__collections__":{}
+                        },
+                    "c1a1q3":{
+                        "answer":true,
+                        "questionText":"Hippos sweat a red substance",
+                        "options":[true,false],"__collections__":{}
+                        }
+                    }
+                }
+            }
+        },
+    "companies":
+    {"c1":
+        {
+            "description":"Company 1 is a state-of-the-art tech firm that...",
+            "assignments":[{"__datatype__":"documentReference","value":"assignments/c1a1"}],
+            "name":"Company 1","__collections__":{}
+        }
+    },
+    "submissions":{
+        "submission1":{
+            "userID":"user1",
+            "assignmentID":{"__datatype__":"documentReference","value":"assignments/c1a1"},
+            "userEmail":"abc@gmail.com",
+            "answers":[10,"Monday",true],
+            "score":1,
+            "__collections__":{}
+            }
+        }
+    }
+}
