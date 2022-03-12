@@ -3,7 +3,6 @@ import { getFirestore, collection, getDocs, setDoc, getDoc, doc } from 'firebase
 // Follow this pattern to import other Firebase services
 // import { } from 'firebase/<service>';
 
-// TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBzgxlq-pOuo4juvoTX7xRbV7FjvEj5sL0",
   authDomain: "talentspace-12caa.firebaseapp.com",
@@ -20,7 +19,8 @@ const db = getFirestore(app);
 export async function getDocuments(col) {
   const queryCol = collection(db, col)
   const querySnapshot = await getDocs(queryCol)
-  const queryList = querySnapshot.docs.map(doc => doc.data())
+  const queryList = querySnapshot.docs.map(doc => ({data: doc.data(), id: doc.id}))
+
   return queryList
 }
 
