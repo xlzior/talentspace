@@ -1,7 +1,6 @@
-import { doc } from "firebase/firestore/lite";
-import { getAssignments, getDocuments, getAssignment, getCompanies, getSubmissions } from "../../api/database";
+import ButtonLink from "../common/ButtonLink"
 
-export default async function About() {
+export default function About() {
   return (
     <div>
       <p>
@@ -11,7 +10,9 @@ export default async function About() {
         This website is a prototype
       </p>
 
-      {console.log(await getAssignment("c1a1").then(doc => doc))}
+      <ButtonLink to="/assignments" text="Assignments" />
+      <br />
+      <ButtonLink to="/submissions" text="Submissions" />
     </div>
   )
 }

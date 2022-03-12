@@ -13,9 +13,7 @@ export default function Preview() {
         <li>Excel</li>
         <li>Tableau</li>
       </ul>
-      <Link to="/assignments/do" className="start-btn">
-        <button>Start assignment</button>
-      </Link>
+      <ButtonLink to={`/assignments/do/${id}`} text="Start assignment" />
     </>
   )
 }
