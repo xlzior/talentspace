@@ -17,14 +17,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Get a list of cities from your database
-async function getCities(db) {
-  const citiesCol = collection(db, 'cities');
-  const citySnapshot = await getDocs(citiesCol);
-  const cityList = citySnapshot.docs.map(doc => doc.data());
-  return cityList;
-}
-
 export async function getDocuments(col) {
   const queryCol = collection(db, col)
   const querySnapshot = await getDocs(queryCol)
@@ -44,13 +36,11 @@ export function getSubmissions() {
   return getDocuments("submissions")
 }
 
-export async function getQuestions(assignmentID) {
-  const docSnap = await getDoc(doc(db, "assignments", assignmentID))
-  db.collection("assignments").doc("assignmentID").collection("questions").get().then(querySnapshot => {
-    querySnapshot.forEach(doc => {
-        console.log(doc.id, " => ", doc.data());
-    });
-  });
+export async function getAssignment(assignmentID) {
+  const docSnap = await getDoc(doc(db, "assignments", assignmentID)).then(doc => doc.data())
+  const colSnapshot = await getDocs(collection(db, "assignments", assignmentID, "questions"))
+  const queryList = colSnapshot.docs.map(doc => doc.data())
+  docSnap.questions = queryList
   return docSnap
 }
 
