@@ -1,11 +1,10 @@
-import MultipleChoiceQuestion from "./MultipleChoiceQuestion";
-import OpenEndedQuestion from "./OpenEndedQuestion";
+import Question from "./Question"
 
-export default function QuestionList() {
+export default function QuestionList({ questions = [] }) {
   return (
     <div className="question-list">
-      <MultipleChoiceQuestion />
-      <OpenEndedQuestion />
+      {questions.map((data, index) => <Question index={index} {...data} />)}
+      <Question questionText="What is the meaning of life?" />
     </div>
   )
 }

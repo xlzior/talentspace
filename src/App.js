@@ -16,8 +16,8 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route path="assignments" element={<Assignments />}>
           <Route path="" element={<List />} />
-          <Route path="preview" element={<Preview />} />
-          <Route path="do" element={<DoAssignment />} />
+          <Route path="preview/:id" element={<Preview />} />
+          <Route path="do/:id" element={<DoAssignment />} />
         </Route>
         <Route path="submissions" element={<Submissions />} />
         <Route path="" element={<About />} />
