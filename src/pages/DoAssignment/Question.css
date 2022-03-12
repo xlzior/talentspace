@@ -1,0 +1,15 @@
+.open-ended textarea {
+  display: block;
+  min-height: 200px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(0 0 0 / 25%);
+  border-radius: 5px;
+  font-size: medium;
+  font-family: inherit;
+}
+
+.open-ended textarea:focus {
+  outline: none;
+  border: 1px solid #d97485;
+}
