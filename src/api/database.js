@@ -80,7 +80,7 @@ export async function addSubmission(userEmail, phoneNum, assignmentID, answers) 
     phoneNumber: phoneNum,
     answers: answers,
     score: score,
-    assignmentID: "/assignments/" + assignmentID
+    assignmentID: assignmentID
   })
 }
 
