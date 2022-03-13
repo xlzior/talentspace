@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, setDoc, getDoc, doc } from 'firebase/firestore/lite';
+import { v4 as uuidv4 } from 'uuid';
 // Follow this pattern to import other Firebase services
 // import { } from 'firebase/<service>';
 
@@ -61,3 +62,37 @@ async function addCompany(db, doc) {
 async function addAssignment(db, doc) {
   await setDoc(doc(db, "assignments", doc.id), doc.data)
 }
+
+//"s1":{
+//  "answers":[10,"Monday",true],
+//   "userID":"user1",
+//   "assignmentID":{"__datatype__":"documentReference","value":"assignments/c1a1"},
+//   "userEmail":"abc@gmail.com",
+//   "phoneNumber":"12345678"
+//   "score":1,
+//   "__collections__":{}
+//}
+export async function addSubmission(userEmail, phoneNum, assignmentID, answers) {
+  const id = uuidv4()
+  const score = calculateScore(assignmentID, answers)
+  await setDoc(doc(db, "submissions", id), {
+    userEmail: userEmail,
+    phoneNumber: phoneNum,
+    answers: answers,
+    score: score,
+    assignmentID: "/assignments/" + assignmentID
+  })
+}
+
+export async function calculateScore(assignmentID, answers) {
+  var score = 0
+  const questions = await getAssignment(assignmentID).then(doc => doc.questions)
+  for (let i = 0; i < questions.length; i++) {
+    if (answers[i] === questions[i]["answer"]) {
+      score += 1
+    }
+  }
+  return score
+}
+
+calculateScore("c1a1", [10, "Thursday", true])

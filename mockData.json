@@ -1,46 +1,10 @@
-{"__collections__":{
-    "assignments":{
-        "c1a1":{
-            "title":"assignment 1",
-            "companyName":"Company A",
-            "description":"This assignment has three MCQ questions",
-            "__collections__":{
-                "questions":{
-                    "c1a1q1":{
-                        "answer":20,
-                        "options":[10,20,30,40],
-                        "questionText":"What is 10+10?",
-                        "__collections__":{}
-                        },
-                    "c1a1q2":{
-                        "answer":"Saturday",
-                        "questionText":"Which day comes after Friday?",
-                        "options":["Thursday","Monday","Saturday","Sunay"],
-                        "__collections__":{}
-                        },
-                    "c1a1q3":{
-                        "answer":true,
-                        "questionText":"Hippos sweat a red substance",
-                        "options":[true,false],"__collections__":{}
-                        }
-                    }
-                }
-            }
-        },
-    "companies":
-    {"c1":
-        {
-            "description":"Company 1 is a state-of-the-art tech firm that...",
-            "assignments":[{"__datatype__":"documentReference","value":"assignments/c1a1"}],
-            "name":"Company 1","__collections__":{}
-        }
-    },
+{"__collections__":{"assignments":{"c1a1":{"title":"assignment 1","skills":["Java","Python"],"companyName":"Company A","description":"This assignment has three MCQ questions","__collections__":{"questions":{"c1a1q1":{"answer":20,"questionText":"What is 10+10?","options":[10,20,30,40],"__collections__":{}},"c1a1q2":{"questionText":"Which day comes after Friday?","answer":"Saturday","options":["Thursday","Monday","Saturday","Sunay"],"__collections__":{}},"c1a1q3":{"options":[true,false],"answer":true,"questionText":"Hippos sweat a red substance","__collections__":{}}}}},"c1a2":{"description":"This assignment has 3 Open Ended questions","companyName":"company A","skills":["Microsoft Excel","Tableau"],"title":"Assignment 2","__collections__":{"questions":{"c1a2q1":{"questionText":"Create a function that generates 10 random numbers and sorts them","answer":"","__collections__":{}},"c1a2q2":{"questionText":"Which sorting algorithm is the most efficient?","answer":"","__collections__":{}},"c1a2q3":{"answer":"","questionText":"What is the benefit of using React framework?","__collections__":{}}}}},"c1a3":{"description":"This assignment will require you to create a webpage","skills":["HTML","CSS","JavaScript"],"title":"Assignment 3","companyName":"Company A","__collections__":{"questions":{"c1a3q1":{"questionText":"Using HTML, CSS and JavaScript, create a website with buttons that changes to a random colour every click.","__collections__":{}}}}},"c1a4":{"title":"Assignment 4","companyName":"Company A","skills":["Object-Oriented Programming","Java"],"description":"This assignment consists of 2 MCQ and 2 Open-ended questions","__collections__":{"questions":{"c1a4q1":{"answer":"Control","questionText":"https://console.firebase.google.com/project/talentspace-12caa/firestore/data/~2Fassignments~2Fc1a4~2Fquestions~2Fc1q4a1","options":["Encapsulation","Abstraction","Inheritance","Control"],"__collections__":{}},"c1a4q2":{"question":"You can declare an instance variable in an interface","options":[true,false],"answer":false,"__collections__":{}},"c1a4q3":{"answer":"","questionText":"What is an abstract class?","__collections__":{}},"c1a4q4":{"answer":"","questionText":"What is the main difference between overloading and overriding?","__collections__":{}}}}},"c2a1":{"skills":["Accounting","Finance"],"companyName":"Company B","description":"This assignment has three MCQ questions","title":"assignment 1","__collections__":{"questions":{"c2a1q1":{"questionText":"The primary goal of financial management is ______","options":["to maximise the return","to minimise risk","to maximise the wealth of owners","to maximise profit"],"answer":"to maximise the wealth of owners","__collections__":{}},"c2a1q3":{"options":["Current assets","Fixed assets","Intangible assets","Investments"],"answer":"Intangible assets","questionText":"The asset that can be converted into cash within a short period is known as","__collections__":{}},"c2q1a2":{"questionText":"Accounting provides information on","options":["Cost and income","Tax liability","Financial conditions","All of the above"],"answer":"All of the above","__collections__":{}}}}},"c2a2":{"skills":["Financial Management","Business Administration"],"title":"Financial management","companyName":"Company B","description":"This assignment has 3 open-ended questions","__collections__":{"questions":{"c2a2q1":{"questionText":"Explain the difference between debit and credit","answer":"","__collections__":{}},"c2a2q2":{"answer":"","questionText":"What are the different financial portfolios available?","__collections__":{}},"c2a2q3":{"answer":"","questionText":"Explain the meaning of a business-to-consumer retail model","__collections__":{}}}}},"c3a1":{"skills":["communications","media"],"title":"Media writer","description":"This assignment has 1 open-ended question","companyName":"Company C","__collections__":{"questions":{"c3a1q1":{"answer":"","questionText":"Write your thoughts and reflections of the most interesting news article that you have read","__collections__":{}}}}}},"companies":{"c1":{"assignments":[{"__datatype__":"documentReference","value":"assignments/c1a1"},{"__datatype__":"documentReference","value":"assignments/c1a2"},{"__datatype__":"documentReference","value":"assignments/c1a3"}],"description":"Company 1 is a state-of-the-art tech firm that...","name":"Company A","__collections__":{}},"c2":{"name":"Company B","description":"Company B is a social media company that...","__collections__":{}},"c3":{"name":"Company C","description":"Company C is a startup that aims to...","__collections__":{}}},
     "submissions":{
-        "submission1":{
+        "s1":{
+            "answers":[10,"Monday",true],
             "userID":"user1",
             "assignmentID":{"__datatype__":"documentReference","value":"assignments/c1a1"},
             "userEmail":"abc@gmail.com",
-            "answers":[10,"Monday",true],
             "score":1,
             "__collections__":{}
             }
