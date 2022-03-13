@@ -8,12 +8,13 @@
   border-radius: 13px;
   border: 1px solid var(--pink);
   background-color: var(--light-pink);
-  box-shadow: 0 20px 20px 0 rgb(0 0 0 / 5%);
+  box-shadow: 0 10px 10px 0 rgb(0 0 0 / 5%);
 }
 
 .item:hover {
-  box-shadow: 0 40px 40px 0 rgb(0 0 0 / 10%);
-  transition: box-shadow 0.5s;
+  box-shadow: 30px 20px 30px 0 rgb(0 0 0 / 10%);
+  transition: all 0.4s;
+  transform: translate(-2px, -2px);
 }
 
 .item h4 {

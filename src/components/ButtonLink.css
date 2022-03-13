@@ -4,8 +4,13 @@ a.btn > button {
   font-weight: bold;
   padding: 15px;
   min-width: 300px;
-  border: none;
+  border: 2px solid var(--pink);
   border-radius: 10px;
   background-color: var(--pink);
   color: white;
+}
+
+a.btn > button:hover {
+  background-color: var(--medium-pink);
+  transition: all 0.1s;
 }
