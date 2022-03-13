@@ -45,6 +45,21 @@ export async function getAssignment(assignmentID) {
   return docSnap
 }
 
+export async function getSubmission(submissionID) {
+  const submission = await getDoc(doc(db, "submissions", submissionID)).then(doc => doc.data())
+  const assignment = await getAssignment(submission.assignmentID)
+  return {
+    ...submission,
+    ...assignment
+  }
+}
+
+async function testing() {
+  console.log(await getSubmission("s1"))
+}
+
+testing()
+
 //addCompany(db, doc),
 //where doc = {"id": "c1",
         //     "data":{
