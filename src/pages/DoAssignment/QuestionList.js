@@ -1,10 +1,15 @@
+import ContactInfo from "./ContactInfo"
 import Question from "./Question"
 
-export default function QuestionList({ questions = [] }) {
+import "./QuestionList.css"
+
+export default function QuestionList({ questions = [], formData = [], setFormData }) {
   return (
     <div className="question-list">
-      {questions.map((data, index) => <Question index={index} {...data} />)}
-      <Question questionText="What is the meaning of life?" />
+      <ContactInfo formData={formData} setFormData={setFormData} />
+      {questions.map((data, index) => (
+        <Question key={index} index={index} {...data} formData={formData} setFormData={setFormData} />
+      ))}
     </div>
   )
 }

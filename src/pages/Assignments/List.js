@@ -11,8 +11,6 @@ export default function List() {
     getAssignments().then(data => setAssignments(data));
   }, [])
 
-  console.log(assignments)
-
   return (
     <>
       <h2>Assignments</h2>

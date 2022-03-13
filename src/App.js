@@ -9,6 +9,7 @@ import DoAssignment from "./pages/DoAssignment";
 
 import Submissions from "./pages/Submissions";
 import About from "./pages/About";
+import Submitted from "./pages/Submitted";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="" element={<List />} />
           <Route path="preview/:id" element={<Preview />} />
           <Route path="do/:id" element={<DoAssignment />} />
+          <Route path="submitted" element={<Submitted />} />
         </Route>
         <Route path="submissions" element={<Submissions />} />
         <Route path="" element={<About />} />
