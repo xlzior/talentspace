@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import { getAssignment } from "../../api/database";
 
-import ButtonLink from "../common/ButtonLink";
+import ButtonLink from "../../components/ButtonLink";
 import "./index.css"
 
 export default function Preview() {

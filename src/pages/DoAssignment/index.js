@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 
 import { addSubmission, getAssignment } from "../../api/database";
 
-import ButtonLink from "../common/ButtonLink"
-import QuestionList from "../common/QuestionList";
+import ButtonLink from "../../components/ButtonLink"
+import QuestionList from "../../components/QuestionList";
 
 const handleSubmit = (id, formData) => {
   const { email, phoneNo, answers } = formData;

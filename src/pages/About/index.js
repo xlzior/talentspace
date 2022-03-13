@@ -1,4 +1,4 @@
-import ButtonLink from "../common/ButtonLink"
+import ButtonLink from "../../components/ButtonLink"
 
 import "./index.css"
 
