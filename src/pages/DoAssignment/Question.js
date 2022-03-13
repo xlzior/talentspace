@@ -41,10 +41,19 @@ function MultipleChoiceQuestion({ index, questionText, options, formData, setFor
 }
 
 function OpenEndedQuestion({ index, questionText, formData, setFormData }) {
+  const handleChange = event => {
+    const newFormData = {
+      ...formData,
+      answers: [...formData.answers]
+    }
+    newFormData.answers[index] = String(event.target.value)
+    setFormData(newFormData)
+  }
+
   return (
     <div className="question open-ended">
       <label htmlFor={index}><h4>{questionText}</h4></label>
-      <textarea id={index} name={index}>
+      <textarea id={index} name={index} onChange={handleChange}>
         {formData.answers[index]}
       </textarea>
     </div>
