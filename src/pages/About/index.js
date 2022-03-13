@@ -15,7 +15,7 @@ export default function About() {
       <ButtonLink to="/assignments" text="Assignments" />
       <br />
       <ButtonLink to="/submissions" text="Submissions" />
-      {console.log(await calculateScore("c1a1", [20, "Saturday", true]))}
+      {console.log(await getSubmissions())}
     </div>
   )
 }
