@@ -1,4 +1,4 @@
-import "./ReadOnlyQuestion.css"
+import "./Question.css"
 
 export default function ReadOnlyQuestion({ options, ...props }) {
   if (options) {

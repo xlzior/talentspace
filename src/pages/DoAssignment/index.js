@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { addSubmission, getAssignment } from "../../api/database";
 
 import ButtonLink from "../common/ButtonLink"
-import QuestionList from "./QuestionList";
+import QuestionList from "../common/QuestionList";
 
 const handleSubmit = (id, formData) => {
   const { email, phoneNo, answers } = formData;
@@ -17,7 +17,15 @@ export default function Assignment() {
   const [formData, setFormData] = useState({ email: "", phoneNo: "", answers: [] })
 
   useEffect(() => {
-    getAssignment(id).then(data => setAssignmentInfo(data));
+    getAssignment(id).then(data => {
+      setAssignmentInfo(data)
+      setFormData(formData => {
+        return { 
+          ...formData,
+          answers: new Array(data.questions.length).fill("")
+        }
+      })
+    });
   }, [id])
 
   const { title, companyName, questions } = assignmentInfo;

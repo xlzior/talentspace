@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 
 import { getSubmission } from "../../api/database";
 
-import ReadOnlyQuestionList from "./ReadOnlyQuestionList";
 import CopyableField from "../common/CopyableField";
+import ReadOnlyQuestionList from "../common/ReadOnlyQuestionList";
 
 import "./ViewSubmission.css"
 

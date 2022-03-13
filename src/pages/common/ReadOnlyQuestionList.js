@@ -1,6 +1,6 @@
 import ReadOnlyQuestion from "./ReadOnlyQuestion"
 
-import "./ReadOnlyQuestionList.css"
+import "./QuestionList.css"
 
 export default function ReadOnlyQuestionList({ questions = [], answers = {} }) {
   return (
