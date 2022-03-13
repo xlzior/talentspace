@@ -27,5 +27,5 @@
 .contact-info input[type="text"]:focus,
 .contact-info input[type="email"]:focus {
   outline: none;
-  border: 1px solid #d97485;
+  border: 1px solid var(--pink);
 }

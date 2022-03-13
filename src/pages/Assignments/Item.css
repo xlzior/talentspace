@@ -6,8 +6,8 @@
   min-width: 300px;
   width: 40%;
   border-radius: 13px;
-  border: 1px solid #d97485;
-  background-color: #faebee;
+  border: 1px solid var(--pink);
+  background-color: var(--light-pink);
   box-shadow: 0 20px 20px 0 rgb(0 0 0 / 5%);
 }
 

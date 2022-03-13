@@ -4,7 +4,7 @@ import "./index.css"
 
 export default function About() {
   return (
-    <div>
+    <div className="about">
       <p>
         TalentSpace is an online hiring platform that champions unbiased hiring and focuses on applicants' skillsets, allowing women to stand a fair chance in their job applications.
       </p>

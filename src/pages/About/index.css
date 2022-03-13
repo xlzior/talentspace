@@ -1,7 +1,15 @@
+.about {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: large;
+}
+
 .roadsigns {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .roadsigns .user {

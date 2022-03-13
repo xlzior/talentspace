@@ -4,7 +4,7 @@
 }
 
 .submissions-list thead {
-  background-color: #d97485;
+  background-color: var(--pink);
   color: white;
 }
 

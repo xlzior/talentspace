@@ -6,6 +6,6 @@ a.btn > button {
   min-width: 300px;
   border: none;
   border-radius: 10px;
-  background-color: #d97485;
+  background-color: var(--pink);
   color: white;
 }
