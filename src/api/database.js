@@ -74,7 +74,7 @@ async function addAssignment(db, doc) {
 //}
 export async function addSubmission(userEmail, phoneNum, assignmentID, answers) {
   const id = uuidv4()
-  const score = calculateScore(assignmentID, answers)
+  const score = await calculateScore(assignmentID, answers)
   await setDoc(doc(db, "submissions", id), {
     userEmail: userEmail,
     phoneNumber: phoneNum,
@@ -88,11 +88,9 @@ export async function calculateScore(assignmentID, answers) {
   var score = 0
   const questions = await getAssignment(assignmentID).then(doc => doc.questions)
   for (let i = 0; i < questions.length; i++) {
-    if (answers[i] === questions[i]["answer"]) {
+    if (answers[i] === String(questions[i]["answer"])) {
       score += 1
     }
   }
   return score
 }
-
-calculateScore("c1a1", [10, "Thursday", true])
