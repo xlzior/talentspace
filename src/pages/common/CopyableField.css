@@ -1,0 +1,26 @@
+.copyable-field-container {
+  display: inline-flex;
+  align-items: center;
+  background-color: #d97485;
+  color: white;
+  font-weight: 500;
+  padding: 6px 6px 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.copyable-field {
+  display: inline-flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.copyable-field svg {
+  margin-left: 5px;
+  color: slategray;
+}

@@ -1,0 +1,18 @@
+.submissions-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.submissions-list thead {
+  background-color: #d97485;
+  color: white;
+}
+
+.submissions-list th, .submissions-list td {
+  padding: 7px;
+}
+
+.submissions-list td {
+  border: 1px solid lightgrey;
+  cursor: pointer;
+}

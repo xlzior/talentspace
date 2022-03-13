@@ -1,4 +1,4 @@
-export default function ContactInfo({ onSubmit, formData, setFormData }) {
+export default function ContactInfo({ formData, setFormData }) {
   const handleChange = event => {
     const newFormData = {
       ...formData,

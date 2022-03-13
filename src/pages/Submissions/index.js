@@ -1,7 +1,5 @@
+import { Outlet } from "react-router-dom";
+
 export default function Submissions() {
-  return (
-    <>
-      <h2>Submissions</h2>
-    </>
-  )
+  return <Outlet />
 }

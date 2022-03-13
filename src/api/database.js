@@ -58,7 +58,7 @@ async function testing() {
   console.log(await getSubmission("s1"))
 }
 
-testing()
+// testing()
 
 //addCompany(db, doc),
 //where doc = {"id": "c1",
