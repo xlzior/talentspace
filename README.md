@@ -32,4 +32,4 @@ Technology used
 - React
 - Firebase (Firestore Database, Firebase hosting)
 
-Due to time constraints, we did not implement an authentication system for applicants and companies.
+For ease of demonstration, we did not implement an authentication system for applicants and companies. Hence, you may view both the applicants' and the companies' view.

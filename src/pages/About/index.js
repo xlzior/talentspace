@@ -27,7 +27,7 @@ export default function About() {
       </div>
 
       <p>
-        This website is a prototype developed for Hack For Good 2022. Due to time constraints, we did not implement an authentication system for applicants and companies.
+        This website is a prototype developed for Hack For Good 2022. For ease of demonstration, we did not implement an authentication system for applicants and companies. Hence, you may view both the applicants' and the companies' view.
       </p>
     </div>
   )
